@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <tiTLE> HEADINGS AMD PARAGRAPHS</tiTLE>
+    </HEAD>
+    <BODY>
+        <H1> HTML </H1>
+        <H2> HTML STANDS FOR HYPER TEXT MATKUP LANGUAGE</H2>
+        <H3> HTML IS USED TO CREAT AND DESINE WEBSITES</H3>
+        <H4> ITS ADVANTAGES ARE :</H4>
+        <H5>1) HTML helps to build structure of a website and is a widely used Markup language.
+            It is easy to learn.<BR>
+            2)  Every browser supports HTML Language.<br>
+           3) HTML is light weighted and fast to load.<br>
+           4) Storage of big files are allowed because of the application cache feature.</H5><br>
+            <H6></Fun Facts About HTML
+                HTML was created in the early 90s by Tim Berners-Lee, a British computer scientist who is also known as the father of the World Wide Web 
+                The first version of HTML, HTML 1.0, had only 18 tags (elements), which were used to create basic text formatting and hyperlinks.</H6>
+       <p>
+        HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes, and other items. HTML elements are delineated by tags, written using angle brackets. Tags such as <img> and <input> directly introduce content into the page.
+       </p>         
+    </BODY>
+</HTML>
