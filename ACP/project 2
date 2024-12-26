@@ -17,7 +17,7 @@
                 HTML was created in the early 90s by Tim Berners-Lee, a British computer scientist who is also known as the father of the World Wide Web 
                 The first version of HTML, HTML 1.0, had only 18 tags (elements), which were used to create basic text formatting and hyperlinks.</H6>
        <p>
-        HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes, and other items. HTML elements are delineated by tags, written using angle brackets. Tags such as <img> and <input> directly introduce content into the page.
+        HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes, and other items. HTML elements are delineated by tags, written using angle brackets..
        </p>         
     </BODY>
 </HTML>
