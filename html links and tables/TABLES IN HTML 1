@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            marks table 
+        </title>
+    </head>
+    <body>
+<h1> marks table </h1>
+<table border = 3 width = ''100%'' bgcolour = ''cayan''>
+<tr> <th> name </th> <th> class </th> <th>marks</th> </tr>
+<tr bgcolour = ''pink''
+ align="CENTER"></tr><TD> KAREN </TD> <TD> GRADE 7TH </TD> <TD> 74/80 </TD> </tr>
+<TR> align = CENTER ><TD> MAHIRAH</TD> <TD> GRADE 8TH </TD> <TD> 73/80</TD> </TR>
+<TR> align = CENTER ><TD> SHANAYA</TD> <TD> GRADE 7TH </TD> <TD> 78/80</TD> </TR>
+    </body>
+</html>

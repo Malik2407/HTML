@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            lists
+        </title>
+    </head>
+    <body>   
+<h1> STUDENTS  list</h1>
+    <h2 > ordered list </h2>
+     <ol type=" I" >  
+      <li> class A </li>
+     <li> class B </li>
+     <li> class C </li> </ol> 
+<h3> unordered list </h3>
+<ul type = ''disc''>  
+<li> 40 students </li>
+<li> 36 students </li>
+<li> 38 students </li> </ul>
+<h4> defination list </h4>
+<dl>
+    <dt>  toppers</dt>
+<DD>  -THE STUDENTS WHO GET THE HIGHEST MARKS  </DD>
+</dl>
+    </body>
+</html>
