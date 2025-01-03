@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media Example</title>
+</head>
+<body>
+    <h1>Media on a Webpage</h1>
+
+    <!-- Adding a Cute Fluffy Bear Image -->
+    <h2>Image: A Cute Fluffy Bear</h2>
+    <img src="https://via.placeholder.com/300?text=Fluffy+Bear" alt="A cute fluffy bear" width="300">
+    <p>Isn't this bear adorable?</p>
+
+    <!-- Adding Daylight Song -->
+    <h2>Audio: Daylight</h2>
+    <audio controls>
+        <source src="daylight.mp3" type="audio/mpeg">
+        Your browser doesn't support audio, but you can download the song!
+    </audio>
+
+    <!-- Adding a Video of an Ant Walking -->
+    <h2>Video: An Ant Walking</h2>
+    <video controls width="320">
+        <source src="ant-walking.mp4" type="video/mp4">
+        Your browser doesn't support video, but you can download it!
+    </video>
+</body>
+</html>
+
