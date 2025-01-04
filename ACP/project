@@ -7,12 +7,12 @@
     <h1>Media on a Webpage</h1>
 
     <!-- Adding a Cute Fluffy Bear Image -->
-    <h2>Image: A Cute Fluffy Bear</h2>
+    <h2>Image:  Cute Fluffy Bear</h2>
     <img src="https://via.placeholder.com/300?text=Fluffy+Bear" alt="A cute fluffy bear" width="300">
     <p>Isn't this bear adorable?</p>
 
     <!-- Adding Daylight Song -->
-    <h2>Audio: Daylight</h2>
+    <h2>Audio: daylight</h2>
     <audio controls>
         <source src="daylight.mp3" type="audio/mpeg">
         Your browser doesn't support audio, but you can download the song!

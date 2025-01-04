@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            SEMANTIC ELEMENTS
+        </title>
+    </head>
+    <body>
+<HEAD ID = "HEAD">
+    <H1> CATS</H1>
+    <UL><nav>
+        <LI><a href="#head"></a></LI>
+        <li><a href=" #content "></a></li>
+        <li><a href=" footer"></a></li>
+    </ul></nav>
+</HEAD>
+<section id=" content">
+    <article>
+        <h3>facts about cats </h3>
+        
+        <p>
+            Get ready to discover some paw-some cat facts! 🐾
+
+            These purrfect companions have some truly remarkable abilities that make them both mysterious and lovable! Here's the lowdown on our feline friends:
+            
+            Feline Facts:
+            
+            These clever kitties have a keen sense of hearing – they can hear higher-pitched sounds that are inaudible to humans, allowing them to detect tiny movements from prey. It’s no surprise that cats can hear up to 64 kHz, far beyond the human range of hearing!
+            
+            Cat paws are pretty paws-itively special! Their paws are not only incredibly soft but also sensitive – packed with sensory receptors that help them detect vibrations in the ground. Interestingly, cats' paws have unique prints, like fingerprints, making them as individual as humans.
+            
+            Whiskers, whiskers everywhere! Cats’ whiskers are highly sensitive tools, helping them navigate in the dark and measure the width of openings. They are so attuned that they can even sense changes in air currents. In fact, their whiskers are often more accurate than sight for measuring distances!
+            
+            Purrfect communication! Cats purr not only when they’re happy, but also when they’re frightened, in pain, or even when they’re healing. It’s believed that the vibrations from purring promote healing and can have a calming effect – both for the cat and its human.
+            
+            Cat Nap Time! Cats are notorious for being expert sleepers – they can snooze for 12-16 hours a day. This helps them conserve energy, which they’d need for their hunting escapades (or for chasing that elusive red dot)!
+            
+            Eyes that Shine! Cats have eyes that can see in near-total darkness, thanks to a layer called the tapetum lucidum. This special eye tissue acts like a mirror, reflecting light back through the retina, making cats excellent night hunters!
+            
+            Did you know? Cats' noses are as unique as fingerprints. Each cat has its own individual noseprint that’s as distinctive as our fingerprints, adding yet another layer of mystery to these fascinating creatures!
+            
+            Feline Reflexes Cats are known for their agility and speed. They can jump up to six times their body length in a single leap and have a righting reflex, meaning they can twist their bodies mid-air and land on their feet. Talk about cat-like reflexes!
+            
+            These fun facts only scratch the surface of what makes cats so wonderful. From their sharp senses to their adorable personalities, these furry friends continue to surprise us every day.
+            
+            
+            
+            
+            
+            
+            Get ready to discover some paw-some cat facts! 🐾
+
+            These purrfect companions have some truly remarkable abilities that make them both mysterious and lovable! Here's the lowdown on our feline friends:
+            
+            Feline Facts:
+            
+            These clever kitties have a keen sense of hearing – they can hear higher-pitched sounds that are inaudible to humans, allowing them to detect tiny movements from prey. It’s no surprise that cats can hear up to 64 kHz, far beyond the human range of hearing!
+            
+            Cat paws are pretty paws-itively special! Their paws are not only incredibly soft but also sensitive – packed with sensory receptors that help them detect vibrations in the ground. Interestingly, cats' paws have unique prints, like fingerprints, making them as individual as humans.
+            
+            Whiskers, whiskers everywhere! Cats’ whiskers are highly sensitive tools, helping them navigate in the dark and measure the width of openings. They are so attuned that they can even sense changes in air currents. In fact, their whiskers are often more accurate than sight for measuring distances!
+            
+            Purrfect communication! Cats purr not only when they’re happy, but also when they’re frightened, in pain, or even when they’re healing. It’s believed that the vibrations from purring promote healing and can have a calming effect – both for the cat and its human.
+            
+            Cat Nap Time! Cats are notorious for being expert sleepers – they can snooze for 12-16 hours a day. This helps them conserve energy, which they’d need for their hunting escapades (or for chasing that elusive red dot)!
+            
+            Eyes that Shine! Cats have eyes that can see in near-total darkness, thanks to a layer called the tapetum lucidum. This special eye tissue acts like a mirror, reflecting light back through the retina, making cats excellent night hunters!
+            
+            Did you know? Cats' noses are as unique as fingerprints. Each cat has its own individual noseprint that’s as distinctive as our fingerprints, adding yet another layer of mystery to these fascinating creatures!
+            
+            Feline Reflexes Cats are known for their agility and speed. They can jump up to six times their body length in a single leap and have a righting reflex, meaning they can twist their bodies mid-air and land on their feet. Talk about cat-like reflexes!
+            
+            These fun facts only scratch the surface of what makes cats so wonderful. From their sharp senses to their adorable personalities, these furry friends continue to surprise us every day.
+        </p>            
+    </article>
+    <aside> 
+        <figure> 
+            <img src="DALL·E 2025-01-04 21.06.35 - A cute Persian cat with a fluffy white coat and large, expressive eyes, sitting calmly in a cozy indoor setting. The cat's fur is long and soft, and i.jpeg"
+        </figure>
+    </aside>
+    <video width= 400 height= 400 controls>
+    <source src="6853337-uhd_2160_4096_25fps.mp4">
+</video>
+</section>
+<footer id
+    </body>
+</html>
