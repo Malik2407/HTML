@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Animation Fun</title>
+    <style>
+        @keyframes colorChange {
+            0% { background-color: aqua; }
+            25% { background-color: aquamarine; }
+            50% { background-color: blue; }
+            75% { background-color: blueviolet; }
+            100% { background-color: palegreen; }
+        }
+
+        #animatedBox {
+            width: 300px;
+            height: 300px;
+            border: 10px solid black;
+            background-color: pink;
+            animation: colorChange 8s infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4682b4;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 Welcome to My Animation Page! made by Shanaya 🎉</h1>
+    <p>Enjoy the color-changing box below! Its very cool and mezmorising to look at .  🌈</p>
+    <div id="animatedBox">✨</div>
+</body>
+</html>
