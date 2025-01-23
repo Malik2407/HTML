@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Selector</title>
+    <style>
+        /* Gradient Background */
+        body {
+           
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            border: 2px solid red;
+            border-radius: 5px;
+        }
+ 
+         /* Sibling selector */
+  h1 + p {
+    font-size: 32px;
+    color: black; 
+  }
+</style>
+<body>
+</body>
+    </style>
+</head>
+<body>
+    <h1>Advanced Selector Example</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <style>
+        /* Attribute selector */
+        input[type=text] {
+          border: 2px solid red;
+        }
+      
+        /* Child selector */
+        ul > li {
+          color: black;
+        }
+        
+        a:hover{
+         color: rgb(175, 179, 238);
+         font-size: 22px;
+        }
+        li::nth-child(2)
+{ background-color:blue;}
+ul li::before {
+      content: "✨"; /* Use a consistent star character */
+    }
+
+    a::after {
+      content: "✨";
+    }
+    p::first-letter{
+font-size: 200%;
+color: aqua;
+
+    }
+      </style>
+      
+      <body>
+        <h1>Space exploration</h1>
+        <ul>
+          <li>moon mission</li>
+          <li>satellite</li>
+          <li>space ship</li>
+          <li>black hole</li>
+        </ul>
+        <H1> SPACE</H1>
+        <P>Earth, our blue marble floating in the vast expanse of space, is a masterpiece of cosmic artistry. Spinning gracefully in the void, it orbits a blazing star that fuels life with its golden rays. From the swirling clouds above to the molten core beneath, Earth is a vibrant oasis wrapped in the endless silence of space. Yet, it's just a speck—a tiny dot in an ever-expanding universe filled with mysteries, galaxies, and the tantalizing promise of the unknown. In the grand symphony of the cosmos, Earth is our stage, reminding us of the fragility and brilliance of existence.
+        </P>
+        <P>The Moon is slowly moving away from Earth at a rate of about 1.5 inches (3.8 centimeters) per year. This is due to the tidal forces between the Earth and the Moon.
+
+            So, every year, the Moon gets a little bit further away from us! </P>
+            <a href="#"> space> </a>
+
+
+
+
+
+
+        </P>
+      </body>
+</body>
+</html>
+
