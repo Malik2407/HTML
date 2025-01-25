@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Camel Scene</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to top, #f7c8b1, #ffb14e);
+    }
+    canvas {
+      border: 5px solid #3e1a1a;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="camelCanvas" width="800" height="600"></canvas>
+
+  <script>
+    const canvas = document.getElementById('camelCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Draw background (desert and sun)
+    function drawBackground() {
+      ctx.fillStyle = '#f5e1a4'; // Desert color
+      ctx.fillRect(0, 400, canvas.width, 200); // Desert ground
+
+      ctx.fillStyle = '#ffae42'; // Sun color
+      ctx.beginPath();
+      ctx.arc(650, 150, 80, 0, Math.PI * 2); // Sun
+      ctx.fill();
+    }
+
+    // Draw camel body
+    function drawCamel(x, y) {
+      ctx.fillStyle = '#d2a35d'; // Camel body color
+      ctx.beginPath();
+      ctx.moveTo(x, y); // Start from camel's body
+      ctx.lineTo(x + 100, y); // Bottom of the body
+      ctx.lineTo(x + 100, y - 50); // Camel's hump right
+      ctx.lineTo(x + 150, y - 50); // Camel's neck
+      ctx.lineTo(x + 150, y - 20); // Camel's neck bottom
+      ctx.lineTo(x + 170, y - 20); // Camel's head
+      ctx.lineTo(x + 170, y - 40); // Camel's head upper part
+      ctx.lineTo(x + 150, y - 60); // Camel's head back
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    // Draw camel legs
+    function drawCamelLegs(x, y) {
+      ctx.fillStyle = '#9e7a4e'; // Leg color
+      // Front right leg
+      ctx.fillRect(x + 40, y, 10, 50);
+      // Front left leg
+      ctx.fillRect(x + 70, y, 10, 50);
+      // Back right leg
+      ctx.fillRect(x + 20, y, 10, 50);
+      // Back left leg
+      ctx.fillRect(x + 90, y, 10, 50);
+    }
+
+    // Draw a simple camel head
+    function drawCamelHead(x, y) {
+      ctx.fillStyle = '#b58b5d'; // Head color
+      ctx.beginPath();
+      ctx.arc(x + 170, y - 35, 20, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(x + 180, y - 40, 5, 0, Math.PI * 2); // Eye
+      ctx.fillStyle = 'black';
+      ctx.fill();
+    }
+
+    // Draw camel's tail
+    function drawCamelTail(x, y) {
+      ctx.strokeStyle = '#d2a35d'; // Tail color
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.moveTo(x + 100, y - 20);
+      ctx.lineTo(x + 150, y - 80);
+      ctx.stroke();
+    }
+
+    // Draw scene
+    function drawScene() {
+      drawBackground();
+      drawCamel(100, 350);
+      drawCamelLegs(100, 350);
+      drawCamelHead(100, 350);
+      drawCamelTail(100, 350);
+      
+      drawCamel(400, 350);
+      drawCamelLegs(400, 350);
+      drawCamelHead(400, 350);
+      drawCamelTail(400, 350);
+    }
+
+    drawScene();
+  </script>
+</body>
+</html>
