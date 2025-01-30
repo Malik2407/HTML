@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Life in Deserts - Ladakh & Sahara</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #fffbec;
+            color: #333;
+            margin: 20px;
+            padding: 20px;
+            border: 5px dotted #ffcccb;
+        }
+        h1 {
+            text-align: center;
+            color: #ff6347;
+            text-shadow: 2px 2px #ffc1c1;
+        }
+        h2 {
+            color: #ff69b4;
+            border-bottom: 2px dashed #ffb6c1;
+        }
+        .section {
+            background-color: #fffacd;
+            border: 3px solid #ffd700;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #ffe4b5;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #ffa07a;
+        }
+        .fun-facts {
+            background-color: #e0ffff;
+            border: 3px solid #afeeee;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            background-color: #ffe4e1;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px dashed #ffa07a;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌟 Life in Deserts 🌵</h1>
+    
+    <div class="section">
+        <h2>What is a Desert? 🤔</h2>
+        <ul>
+            <li>A place with very little rain and extreme weather.</li>
+            <li>Two types: <strong>Hot</strong> (like Sahara) and <strong>Cold</strong> (like Ladakh).</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>🏜️ The Sahara Desert</h2>
+        <ul>
+            <li>World's largest hot desert, in Africa!</li>
+            <li>Hot in the day, cold at night.</li>
+            <li>People grow dates and live near oases.</li>
+            <li>Animals: Camels, scorpions, and lizards.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>❄️ The Ladakh Desert</h2>
+        <ul>
+            <li>Freezing cold desert in India.</li>
+            <li>Known as the "Land of High Passes".</li>
+            <li>People grow crops like barley and vegetables.</li>
+            <li>Animals: Yaks, snow leopards, and mountain goats.</li>
+        </ul>
+    </div>
+    
+    <div class="fun-facts">
+        <h2>Fun Facts 🎉</h2>
+        <ul>
+            <li> 🌵 Camels store fat in their humps, not water!</li>
+            <li>🏔️ Ladakh has a double-humped camel called the Bactrian camel.</li>
+            <li>🌞 The Sahara is bigger than the entire USA!</li>
+        </ul>
+    </div>
+    
+    <div class="footer">
+        <p>✨ Made with love by a Class 7 student! ✨</p>
+        <p>Keep learning and exploring! 🌍</p>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<HTML> 
+    <HEAD>
+        <TITLE> 
+            CATS ARE GREAT
+        </TITLE>
+    </HEAD>
+    <BODY> 
+        <header id="HEAD">
+<H1> CATS</H1>
+<NAV> 
+    <UL>
+        <LI><a href=" #head"></a></LI>
+        <li><a href=" #content"></a></li>
+        <li><a href=" #footer"></a></li>
+    </UL>
+</NAV>
+        </header>
+        <section id="content">
+          <artical>
+            <h3>facts about cats</h3>  
+            <p>
+                Here are some interesting facts about cats<br>
+                Cats spend 70% of their lives sleeping. <br>
+                A group of cats is called a "clowder." <br>
+                Cats have 32 muscles in each ear to help them rotate and locate sounds. <br>
+                Domestic cats share about 95.6% of their genetic makeup with tigers. <br>
+                A cat’s nose print is as unique as a human fingerprint. <br>
+                The world's oldest cat lived to be 38 years old. <br>
+                Cats can make over 100 different sounds, while dogs can only make about 10. <br>
+                The ridges on a cat's tongue are designed to scrape meat off bones. <br>
+                Cats can run up to 30 miles per hour in short bursts. <br>
+                Ancient Egyptians worshipped cats and even mummified them. <br>
+                Cats knead with their paws as a leftover instinct from kittenhood. <br>
+                A cat's whiskers are as wide as their body to help them gauge space. <br>
+            </p>
+          </artical>
+          <aside>
+            <figure> 
+                <img src="cat-2865025_1280.jpg" alt="cute persian cat">
+            </figure>
+          </aside>
+            <video width="400" height="400" controls>
+                <source src="" type="video/mp4">
+                <source src="179212-861403629_small.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <footer id="footer">
+            <!-- Footer content here -->
+        </footer>
+call me no = 8378998901
+    </body>
+</html>
+    </BODY>
+</HTML>

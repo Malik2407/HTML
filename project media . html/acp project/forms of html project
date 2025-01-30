@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1 style="color: blue; font-family: Arial;">Welcome to Our Fun Registration Form!</h1>
+    <p style="font-size: 18px;">Fill in your details to join us. 😊</p>
+
+    <form>
+        <!-- Name Field -->
+        <label for="name">👤 Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br><br>
+
+        <!-- Email Field -->
+        <label for="email">📧 Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <!-- Password Field -->
+        <label for="password">🔒 Password:</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+        <br><br>
+
+        <!-- Gender Field -->
+        <label>👫 Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+        <br><br>
+
+        <!-- City Dropdown -->
+        <label for="city">🏙️ City:</label>
+        <select id="city" name="city" required>
+            <option value="">--Select your city--</option>
+            <option value="nagapur">Nagapur</option>
+            <option value="vishakaptnm">Vishakaptnm</option>
+            <option value="newdelhi">New Delhi</option>
+        </select>
+        <br><br>&#128513;select your favourite colour
+
+        <!-- Favorite Color -->
+        <input type="color" id="color" name="color">
+        <br><br>
+
+        <!-- Hobby Field -->
+        <label for="hobby">🎨 Your Hobby:</label>
+        <input type="text" id="hobby" name="hobby">
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit" style="background-color: lightgreen; font-size: 16px;"> 🚄 🥳 Register the form</button>
+    </form>
+</body>
+</html>
