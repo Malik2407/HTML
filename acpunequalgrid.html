@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>Unequal Grid Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f3e7e9, #e3eeff);
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 15px;
+      max-width: 800px;
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .grid-item:nth-child(odd) {
+      background-color: #ffebb7;
+    }
+    .grid-item:nth-child(even) {
+      background-color: #d8e3e7;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item">🌸 Bloom with Purpose</div>
+    <div class="grid-item">☕ Pause for Coffee</div>
+    <div class="grid-item">🌿 Nature Heals</div>
+    <div class="grid-item">📚 Learn and Grow</div>
+    <div class="grid-item">🎨 Create Magic</div>
+  </div>
+</body>
+</html>
