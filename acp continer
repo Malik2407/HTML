@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            color: #333;
+            margin-top: 20px;
+        }
+        .hobby {
+            width: 250px;
+            height: 250px;
+            margin: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            border-radius: 20px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .hobby:hover {
+            transform: scale(1.1);
+        }
+        .hobby:nth-child(1) { background: linear-gradient(45deg, #ff9a9e, #fad0c4); }
+        .hobby:nth-child(2) { background: linear-gradient(45deg, #a18cd1, #fbc2eb); }
+        .hobby:nth-child(3) { background: linear-gradient(45deg, #fad0c4, #ff9a9e); }
+        .hobby:nth-child(4) { background: linear-gradient(45deg, #ff9a9e, #fbc2eb); }
+        .hobby:nth-child(5) { background: linear-gradient(45deg, #a18cd1, #fad0c4); }
+    </style>
+</head>
+<body>
+    <h1>My Fav Hobbies</h1>
+    <div class="container">
+        <div class="hobby">🎨 Painting</div>
+        <div class="hobby">📖 Reading</div>
+        <div class="hobby">🎸 Playing Guitar</div>
+        <div class="hobby">🚴‍♂️ Cycling</div>
+        <div class="hobby">🎮 Gaming</div>
+    </div>
+</body>
+</html>
