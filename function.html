@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            javascript function
+        </title>
+    </head>
+    <body>
+        <h1>
+            function multiply
+        </h1>
+        <button onclick="mul (2,8);"> CLICK TO MULTIPLY </button>
+        <p id="result"></p>
+        <script>
+            function mul(x,y) {
+
+                if (y == undefined)
+            {
+                y=10
+            
+            }
+            
+            var res = x*y
+          
+            document.getElementById ('result').innerHTML=res
+            }
+        </script>
+    </body>
+</html>
