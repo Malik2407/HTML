@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Colorful JavaScript Methods</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+        h1 {
+            font-size: 28px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+        .output {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            text-align: left;
+            color: #333;
+            font-size: 18px;
+            width: 60%;
+            max-width: 500px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #ff4081;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌟 JavaScript String Methods 🌟</h1>
+    <div class="output" id="result"></div>
+
+    <script>
+        var str1 = "Introduction to Methods";
+        var output = "";
+
+        output += "<span class='highlight'>Uppercase:</span> " + str1.toUpperCase() + "<br><br>";
+        output += "<span class='highlight'>Lowercase:</span> " + str1.toLowerCase() + "<br><br>";
+        output += "<span class='highlight'>Starts with 's':</span> " + str1.startsWith("s") + "<br><br>";
+        var rg = new RegExp('to');
+        var test1 = rg.test(str1);
+        output += "<span class='highlight'>Contains 'to':</span> " + test1;
+        document.getElementById("result").innerHTML = output;
+    </script>
+
+</body>
+</html>
