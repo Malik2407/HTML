@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Famous YouTubers</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #ffcc00;
+            font-size: 32px;
+        }
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #222;
+            display: inline-block;
+            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Famous YouTuber of the Day</h1>
+    <p id="result"></p>
+
+    <script>
+        var dt = new Date();
+        var youtuber = "";
+
+        switch (dt.getDay()) {
+            case 0:
+                youtuber = "MrBeast";
+                break;
+            case 1:
+                youtuber = "PewDiePie";
+                break;
+            case 2:
+                youtuber = "Markiplier";
+                break;
+            case 3:
+                youtuber = "SSSniperWolf";
+                break;
+            case 4:
+                youtuber = "Dude Perfect";
+                break;
+            case 5:
+                youtuber = "CarryMinati";
+                break;
+            case 6:
+                youtuber = "Techno Gamerz";
+                break;
+        }
+
+        document.getElementById("result").innerHTML = youtuber;
+    </script>
+
+</body>
+</html>
