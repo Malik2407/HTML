@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <title>Find Max Value</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #ff5e62;
+        }
+        p {
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Find the Maximum Number</h2>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function findMax() {
+            let max = arguments[0]; 
+            for (let i = 1; i < arguments.length; i++) {
+                if (max < arguments[i]) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+
+        let maxValue = findMax(12, 34, 56); 
+        document.getElementById("result").innerText = "Maximum Value: " + maxValue;
+    </script>
+
+</body>
+</html>
