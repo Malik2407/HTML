@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Math Object Fun</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffecf0;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff4d6d;
+        }
+        .math-container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+        }
+        .result {
+            background: #ffdde1;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Math Object Fun 🎉</h1>
+    <div class="math-container">
+        <div id="sin" class="result"></div>
+        <div id="cos" class="result"></div>
+        <div id="tan" class="result"></div>
+        <div id="abs" class="result"></div>
+    </div>
+
+    <script>
+        let num = -1020;
+        document.getElementById("sin").innerHTML = `sin(${num}) = ${Math.sin(num)}`;
+        document.getElementById("cos").innerHTML = `cos(${num}) = ${Math.cos(num)}`;
+        document.getElementById("tan").innerHTML = `tan(${num}) = ${Math.tan(num)}`;
+        document.getElementById("abs").innerHTML = `Absolute value of ${num} = ${Math.abs(num)}`;
+    </script>
+
+</body>
+</html>
