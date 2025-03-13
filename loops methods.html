@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Methods and Loops</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #FFDEE9;
+            background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff99cc;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff6699;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>✨ Methods and Loops in JavaScript ✨</h2>
+        <p><strong>Current Date:</strong> <span id="date"></span></p>
+        <p><strong>Random Numbers:</strong> <span id="randomNumbers"></span></p>
+        <p><strong>Rounded Random Number:</strong> <span id="roundedRandom"></span></p>
+        <button onclick="generateNumbers()">Generate Again</button>
+    </div>
+
+    <script>
+        function generateNumbers() {
+            let date = new Date();
+            document.getElementById("date").innerText = date.toDateString();
+            
+            let numbers = [];
+            for (let i = 0; i < 5; i++) {
+                numbers.push(Math.floor(Math.random() * 100));
+            }
+            document.getElementById("randomNumbers").innerText = numbers.join(", ");
+            
+            document.getElementById("roundedRandom").innerText = Math.round(Math.random() * 100);
+        }
+        generateNumbers(any);
+    </script>
+</body>
+</html>
