@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Object and Properties</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            width: 300px;
+            text-align: left;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            color: #4b0082;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+            margin: 8px 0;
+        }
+        .highlight {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌟 Object and Properties 🌟</h1>
+    <div class="container">
+        <div id="one"></div>
+    </div>
+
+    <script>
+        var person = {
+            "name": "Shanaya",
+            "phoneno": "9876543210",
+            "DOB": "12/4/2012"
+        };
+
+        document.getElementById("one").innerHTML = `
+            <p><strong>Name:</strong> <span class="highlight">${person.name}</span></p>
+            <p><strong>Phone:</strong> <span class="highlight">${person.phoneno}</span></p>
+            <p><strong>DOB:</strong> <span class="highlight">${person.DOB}</span></p>
+        `;
+    </script>
+
+</body>
+</html>
+
