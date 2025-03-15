@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Games List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e2e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #ffcc00;
+        }
+        .output {
+            font-size: 1.2rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎮 Games List 🎮</h1>
+    <div class="output" id="display"></div>
+
+    <script>
+        let games = ["Minecraft", "Roblox", "Fortnite", "Among Us"];
+
+        let output = `
+            ${games} <br><br>
+            ${games.join(" 🎯 ")} <br><br>
+        `;
+
+        games.pop(); // Removing the last element
+        output += games;
+
+        document.getElementById("display").innerHTML = output;
+    </script>
+</body>
+</html>
