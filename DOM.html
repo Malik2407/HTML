@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌸 DOM Example 🌸</title>
+  <style>
+    body {
+      background-color: #f9f5ff;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #a64ac9;
+    }
+    p {
+      color: #6a0572;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="myid1">✨ Welcome ✨</h1>
+  <p>This is DOM magic! 🪄</p>
+
+  <script>
+    // Grab the element by its ID and get its content
+    var msg = document.getElementById("myid1").innerHTML;
+    
+    // Display an alert with the message
+    alert("💌 The message given is: " + msg);
+  </script>
+
+</body>
+</html>
