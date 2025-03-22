@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>✨ Time Greeting ✨</title>
+  <style>
+    body {
+      background-color: #fdf6f0;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+      color: #333;
+    }
+    .greeting {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    // 🌟 Get the current time
+    var dt = new Date();
+    var hr = dt.getHours();
+
+    // 🕒 Display hour
+    document.write("<p class='greeting'>⏰ The current hour is: <strong>" + hr + "</strong></p>");
+
+    // 🎨 Check time & show greeting
+    if (hr < 10) {
+      document.write("<p class='greeting'>🌞 Good Morning!</p>");
+    } else if (hr < 20) {
+      document.write("<p class='greeting'>🌤️ Good Day!</p>");
+    } else {
+      document.write("<p class='greeting'>🌙 Good Evening!</p>");
+    }
+  </script>
+
+</body>
+</html>
