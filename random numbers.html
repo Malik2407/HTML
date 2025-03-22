@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎲 Random Number Generator 🎲</title>
+  <style>
+    body {
+      background: rgb(238,174,202);
+      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+      color: #4a148c;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .number-box {
+      background-color: #fff3e0;
+      border: 2px dashed #ff80ab;
+      display: inline-block;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✨ Welcome to the Cute Random Number Show! ✨</h1>
+
+  <script>
+    var i = 1;
+    while (i <= 10) {
+      var r = Math.round(Math.random() * 100);
+      document.write('<div class="number-box">🌟 The number is: <strong>' + r + '</strong> 🌟</div><br>');
+      i++;
+    }
+  </script>
+
+  <p style="margin-top: 50px;">💖 Thanks for visiting! 💖</p>
+
+</body>
+</html>
