@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Object & Array Project 🍭</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: 'Comic Sans MS', cursive;
+      color: #333;
+      text-align: center;
+      padding: 30px;
+    }
+    .box {
+      width: 90%;
+      max-width: 600px;
+      margin: 20px auto;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .stationery-box {
+      background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+    }
+    .games-box {
+      background-color: #0f0f0f;
+      color: #00ffea;
+      border: 2px solid #ff00ff;
+    }
+    h1, h2 {
+      color: #ff69b4;
+    }
+    .games-box h1, .games-box h2 {
+      color: #ffea00;
+    }
+    .output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    .emoji {
+      font-size: 20px;
+    }
+    .footer {
+      margin-top:30px; 
+      color:#ff1493;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 Object & Array Fun! 🍬</h1>
+  
+  <div class="box stationery-box">
+    <h2>🖊️ My Stationery Collection:</h2>
+    <div class="output" id="stationery"></div>
+  </div>
+
+  <div class="box games-box">
+    <h2>🎮 Games List 🎮</h2>
+    <div class="output" id="games"></div>
+  </div>
+
+  <p class="footer">💖 Made by Shanaya 💖</p>
+
+  <script>
+    // Object - Stationery
+    const stationery = {
+      pen: 'Blue Pen 🖊️',
+      pencil: 'HB Pencil ✏️',
+      eraser: 'Pink Eraser 🩷',
+      sharpener: 'Little Sharpener 🔪'
+    };
+
+    let stationeryOutput = '{<br>';
+    for (let key in stationery) {
+      stationeryOutput += `&nbsp;&nbsp;"${key}": "${stationery[key]}"<br>`;
+    }
+    stationeryOutput += '}';
+    document.getElementById('stationery').innerHTML = stationeryOutput;
+
+    // Array - Games
+    let games = ["Minecraft", "Roblox", "Fortnite", "Among Us"];
+
+    let output = `
+      ${games} <br><br>
+      ${games.join(" 🎯 ")} <br><br>
+    `;
+
+    games.pop(); // Removing the last element
+    output += `Removed Game: ${games.join(", ")}`;
+
+    document.getElementById("games").innerHTML = output;
+  </script>
+</body>
+</html>
+
