@@ -1,42 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
-  <meta charset="UTF-8">
-  <title>🎲 Random Number Generator 🎲</title>
-  <style>
-    body {
-      background: rgb(238,174,202);
-      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-      color: #4a148c;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-    }
-    .number-box {
-      background-color: #fff3e0;
-      border: 2px dashed #ff80ab;
-      display: inline-block;
-      padding: 20px;
-      margin: 10px;
-      border-radius: 15px;
-      box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
-    }
-  </style>
+    <title>Aesthetic Random Numbers</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h1 {
+            color: #007bff;
+            font-size: 24px;
+        }
+        #randomNumbers {
+            font-size: 18px;
+            margin-top: 15px;
+            padding: 10px;
+            background: #e3f2fd;
+            border-radius: 10px;
+            color: #0056b3;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
-
-  <h1>✨ Welcome to the Cute Random Number Show! ✨</h1>
-
-  <script>
-    var i = 1;
-    while (i <= 10) {
-      var r = Math.round(Math.random() * 100);
-      document.write('<div class="number-box">🌟 The number is: <strong>' + r + '</strong> 🌟</div><br>');
-      i++;
-    }
-  </script>
-
-  <p style="margin-top: 50px;">💖 Thanks for visiting! 💖</p>
-
+    <div class="container">
+        <h1>✨Random Numbers Generator✨</h1>
+        <button onclick="generateNumbers()">Generate Numbers</button>
+        <div id="randomNumbers"></div>
+    </div>
+    
+    <script>
+        function generateNumbers() {
+            let numbers = [];
+            let count = 5; // Number of random numbers to generate
+            
+            while (count > 0) {
+                let randomNumber = Math.floor(Math.random() * 100) + 1;
+                numbers.push(randomNumber);
+                count--;
+            }
+            
+            document.getElementById("randomNumbers").innerHTML = numbers.join(" , ");
+        }
+    </script>
 </body>
 </html>
