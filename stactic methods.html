@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wholesome JS Classes 🌸</title>
+    <style>
+        body {
+            background-color: #fffbf1;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: #4b2c20;
+            padding: 20px;
+        }
+        .card {
+            background: #fff8e7;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
+            display: inline-block;
+            margin-top: 20px;
+            border: 2px dashed #ffadad;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ff758f;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌸 Welcome to the Land of Joyful Coding! 🌸</h1>
+    <div class="card" id="output"></div>
+    
+    <script>
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+            static hello() {
+                return `✨ Keep glowing and growing, wonderful soul! ✨<br>`;
+            }
+            welcome() {
+                return `🌼 Hello, sweet ${this.name}! You are capable of amazing things! 🌼<br>`;
+            }
+        }
+
+        const person1 = new Person("Shanaya");
+        document.getElementById("output").innerHTML = 
+            person1.welcome() + Person.hello();
+    </script>
+</body>
+</html>
