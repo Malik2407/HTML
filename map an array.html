@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Transformation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #FFEBEE, #E1BEE7); /* Pastel gradient background */
+            color: #333; /* Dark gray text for readability */
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white box */
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #6A1B9A; /* Deep purple for heading */
+            margin-bottom: 20px;
+        }
+
+        #result {
+            font-size: 1.2em;
+            color: #2E7D32; /* Green for result text */
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #F8BBD0; /* Pastel pink background for result */
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Array Transformation</h1>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const myArray = [23, 45, 2, 89];
+
+        function multiply(a) {
+            return a * 10;
+        }
+
+        const newArray = myArray.map(multiply);
+        document.getElementById("result").innerHTML = newArray.join(", "); // Join array with commas
+    </script>
+</body>
+</html>
