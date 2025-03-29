@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Math Magic ✨</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cleaner font */
+            background-color: #f0f8ff; /* Light, airy background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .h1 {
+            color: #333; /* Darker, more professional text */
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #87ceeb; /* Light sky blue */
+            color: #fff; /* White text for contrast */
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        button:hover {
+            background-color: #4682b4; /* Darker blue on hover */
+        }
+
+        #result {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #2e8b57; /* Sea green for a calm result */
+            font-weight: 600; /* Slightly bolder */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Let's unveil the Math Magic! ✨</h1>
+    <button onclick="calculateTheResult()">Reveal the Magic!</button>
+    <div id="result"></div>
+
+    <script>
+        function calculateTheResult() {
+            var a = 10;
+            var b = 12;
+            var c  = 4;
+
+           
+            document.getElementById("result").innerHTML = "✨ The magical result is: " + eval(a+b*c) + " ✨"; // Rounded to 2 decimal places
+        }
+    </script>
+
+</body>
+</html>
