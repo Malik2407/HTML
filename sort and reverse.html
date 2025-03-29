@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort My Numbers!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #64b5f6; /* Light blue */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #42a5f5; /* Slightly darker blue on hover */
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            font-size: 1.2em;
+            background-color: white;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2e7d32; /* Green for a bit of pop */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Let's Sort Some Numbers!</h1>
+
+    <button onclick="sortAscending()">Ascending Order ↗️</button>
+    <button onclick="sortDescending()">Descending Order ↘️</button>
+
+    <div id="result">12, 21, 34, 54, 11, 2, 4, 89, 32</div>
+
+    <script>
+        const numbers = [12, 21, 34, 54, 11, 2, 4, 89, 32];
+
+        function sortAscending() {
+            numbers.sort((a, b) => a - b);
+            updateResult();
+        }
+
+        function sortDescending() {
+            numbers.sort((a, b) => b - a);
+            updateResult();
+        }
+
+        function updateResult() {
+            document.getElementById('result').innerText = numbers.join(', ');
+        }
+    </script>
+</body>
+</html>
