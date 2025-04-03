@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrow Function</title>
+    <style>
+        body {
+            background-color: #2e1b3b; /* Kuromi's dark purple vibe */
+            color: #ffccff; /* Soft pink text */
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 28px;
+            text-shadow: 2px 2px 5px #ff66b2;
+        }
+        p {
+            font-size: 20px;
+            padding: 10px;
+            background: #4b2c56;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 3px 3px 10px #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>💜  Arrow Function 💜</h1>
+    <p id="arn"> </p>
+
+    <script>
+        const add = (a, b) => a + b;
+        document.getElementById("arn").innerHTML = 
+            "🎀 The value is " + add(34, 45) + " 🎀";
+    </script>
+</body>
+</html>
