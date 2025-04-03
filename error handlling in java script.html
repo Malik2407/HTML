@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☠️  Error Handling ☠️</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff007f;
+            text-shadow: 2px 2px 5px #9400d3;
+        }
+        #err {
+            font-size: 20px;
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>☠️  Error Handling ☠️</h1>
+    <p id="err">No errors yet...</p>
+    <script>
+        try {
+            let brokenHeart = "Even the moon cries in silence, yet no one listens.";
+            brokenHeart.fadeAway(); // This method doesn't exist, causing a TypeError
+        } catch (e) {
+            document.getElementById("err").innerHTML = `💔 Error: ${e.message} 💔`;
+        }
+    </script>
+</body>
+</html>
