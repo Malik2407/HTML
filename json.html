@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Json objects</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe6f0, #e0f7fa);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #ff69b4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #result {
+      background-color: #fff0f5;
+      border: 3px dashed #ffb6c1;
+      padding: 25px 35px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #ffc0cb;
+      font-size: 20px;
+      text-align: center;
+      max-width: 400px;
+    }
+
+    h1 {
+      color: #ff69b4;
+      font-size: 30px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px #ffc0cb;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>JSON(💞)</h1>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    jobj = {
+      "name": "Shanaya",
+      "age": 12
+    };
+
+    var myjson = JSON.stringify(jobj)
+    var myobj = JSON.parse(myjson)
+
+    document.getElementById("result").innerHTML = "The name is " + myobj.name + "<br> The age is " + myobj.age;
+  </script>
+</body>
+</html>
