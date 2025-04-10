@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 Magical Name Box 🌟</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font! */
+            background-color: #fce4ec; /* Soft pink background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #e91e63; /* Cute pink label color */
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ff4081; /* Pink border */
+            border-radius: 8px;
+            width: 250px;
+        }
+
+        input[type="submit"] {
+            background-color: #ff4081; /* Pink submit button */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #res {
+            margin-top: 20px;
+            color: #2196f3; /* Blue result text */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form name="myForm" onsubmit="return validateForm()">
+            <label for="fname">✨ Your Magical Name ✨</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your name...">
+            <input type="submit" value="Sprinkle Magic!">
+        </form>
+        <div id="res"></div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Oops! Your name box is empty! ✨");
+                return false;
+            } else {
+                document.getElementById("res").innerHTML = "Magic Sprinkled! ✨ Your name is: " + x;
+                return false; // Prevent actual form submission for demo
+            }
+        }
+    </script>
+</body>
+</html>
