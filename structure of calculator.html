@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Calculator</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+    body {
+      background: url('imageskk.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+      color: #00fff7;
+    }
+
+    .calculator {
+      background: rgba(0, 0, 0, 0.7); /* Slight transparency for readability */
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #00fff7, 0 0 30px #00fff7;
+      margin-top: 30px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .display {
+      background: #000;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      color: #00fff7;
+      text-align: right;
+      box-shadow: inset 0 0 10px #00fff7;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      background: #0d0d0d;
+      color: #00fff7;
+      box-shadow: 0 0 10px #00fff7;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #00fff7;
+      color: #0d0d0d;
+    }
+
+    .history {
+      background: rgba(0, 0, 0, 0.7);
+      margin-top: 30px;
+      padding: 15px;
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .history h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      text-shadow: 0 0 5px #00fff7;
+    }
+
+    .history ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .history li {
+      margin-bottom: 8px;
+      font-size: 1rem;
+      border-bottom: 1px solid #00fff7;
+      padding-bottom: 5px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Neon Gamer Calculator</h1>
+
+  <!-- Calculator -->
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <button onclick="appendNumber('7')">7</button>
+      <button onclick="appendNumber('8')">8</button>
+      <button onclick="appendNumber('9')">9</button>
+      <button onclick="operate('/')">÷</button>
+      
+      <button onclick="appendNumber('4')">4</button>
+      <button onclick="appendNumber('5')">5</button>
+      <button onclick="appendNumber('6')">6</button>
+      <button onclick="operate('*')">×</button>
+      
+      <button onclick="appendNumber('1')">1</button>
+      <button onclick="appendNumber('2')">2</button>
+      <button onclick="appendNumber('3')">3</button>
+      <button onclick="operate('-')">-</button>
+      
+      <button onclick="appendNumber('0')">0</button>
+      <button onclick="appendNumber('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="operate('+')">+</button>
+      
+      <button onclick="clearDisplay()" style="grid-column: span 4;">Clear</button>
+    </div>
+  </div>
+
+  <!-- History Section -->
+  <div class="history">
+    <h2>History</h2>
+    <ul id="historyList"></ul>
+  </div>
+
+  <script>
+    let display = document.getElementById('display');
+    let historyList = document.getElementById('historyList');
+    let currentInput = '';
+    let operator = '';
+    let firstValue = '';
+
+    function appendNumber(num) {
+      if (display.textContent === '0') {
+        display.textContent = num;
+      } else {
+        display.textContent += num;
+      }
+    }
+
+    function operate(op) {
+      firstValue = display.textContent;
+      operator = op;
+      display.textContent = '';
+    }
+
+    function calculate() {
+      if (firstValue && operator && display.textContent) {
+        let result = eval(firstValue + operator + display.textContent);
+        let calculation = `${firstValue} ${operator} ${display.textContent} = ${result}`;
+        display.textContent = result;
+        addToHistory(calculation);
+        firstValue = '';
+        operator = '';
+      }
+    }
+
+    function clearDisplay() {
+      display.textContent = '0';
+      firstValue = '';
+      operator = '';
+    }
+
+    function addToHistory(calculation) {
+      const li = document.createElement('li');
+      li.textContent = calculation;
+      historyList.prepend(li);
+    }
+  </script>
+
+</body>
+</html>
