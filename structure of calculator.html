@@ -1,44 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neon Calculator</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+  <title>Pastel Sparkle Calculator</title>
+  <style> 
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+    :root {
+      --bg-image: url("Cosmic Aether Strike Logo.png");
+      --overlay-color: rgba(255, 255, 255, 0.6);
+      --text-color: #444;
+      --btn-bg: #ffe0f0;
+      --btn-shadow: #ffd6e8;
+      --accent: #ff9aa2;
+    }
+
+    body.night {
+      --bg-image: url("Cosmic Aether Strike Night.png");
+      --overlay-color: rgba(255, 255, 255, 0.2);
+      --text-color: #eee;
+      --btn-bg: #c1c8e4;
+      --btn-shadow: #a0a8ff;
+      --accent: #c8b6ff;
+    }
 
     body {
-      background: url('imageskk.jpeg') no-repeat center center fixed;
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: var(--bg-image) no-repeat center center fixed;
       background-size: cover;
-      font-family: 'Orbitron', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       min-height: 100vh;
       padding: 20px;
-      color: #00fff7;
+      color: var(--text-color);
+      transition: background 1s ease, color 0.5s ease;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-top: 20px;
+      text-shadow: 0 0 3px white;
+    }
+
+    .toggle-btn {
+      background: transparent;
+      border: 2px solid var(--accent);
+      border-radius: 20px;
+      padding: 8px 20px;
+      color: var(--accent);
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 0.9rem;
     }
 
     .calculator {
-      background: rgba(0, 0, 0, 0.7); /* Slight transparency for readability */
+      background: var(--overlay-color);
+      backdrop-filter: blur(12px);
       padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px #00fff7, 0 0 30px #00fff7;
-      margin-top: 30px;
-      width: 300px;
-      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(255, 182, 193, 0.6);
+      width: 320px;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .history-bar {
+      background: rgba(255, 255, 255, 0.4);
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 12px;
+      text-align: right;
+      color: #999;
+      min-height: 24px;
+      margin-bottom: 8px;
+      overflow-x: auto;
     }
 
     .display {
-      background: #000;
-      padding: 10px;
-      border-radius: 10px;
-      margin-bottom: 15px;
-      font-size: 1.8rem;
-      color: #00fff7;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 2rem;
+      color: var(--text-color);
       text-align: right;
-      box-shadow: inset 0 0 10px #00fff7;
+      margin-bottom: 15px;
+      box-shadow: inset 0 0 5px #ffdde1;
     }
 
     .buttons {
@@ -48,98 +97,67 @@
     }
 
     button {
-      padding: 15px;
+      padding: 14px;
       font-size: 1.2rem;
       border: none;
-      border-radius: 10px;
-      background: #0d0d0d;
-      color: #00fff7;
-      box-shadow: 0 0 10px #00fff7;
+      border-radius: 12px;
+      background: var(--btn-bg);
+      color: var(--text-color);
+      box-shadow: 0 2px 5px var(--btn-shadow);
       cursor: pointer;
-      transition: 0.2s;
+      transition: all 0.2s ease-in-out;
     }
 
-    button:hover {
-      background: #00fff7;
-      color: #0d0d0d;
+    button:active {
+      transform: scale(0.95);
+      box-shadow: 0 0 15px var(--accent);
     }
 
-    .history {
-      background: rgba(0, 0, 0, 0.7);
-      margin-top: 30px;
-      padding: 15px;
-      width: 300px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
-      max-height: 200px;
-      overflow-y: auto;
-    }
-
-    .history h2 {
-      margin-top: 0;
-      font-size: 1.5rem;
-      text-shadow: 0 0 5px #00fff7;
-    }
-
-    .history ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .history li {
-      margin-bottom: 8px;
-      font-size: 1rem;
-      border-bottom: 1px solid #00fff7;
-      padding-bottom: 5px;
-    }
-
+    .clear { background: #ffd1dc; }
+    .operator { background: #c1c8e4; }
+    .equals { background: #b5ead7; grid-column: span 2; }
+    .ce { background: #f5c7f7; }
   </style>
 </head>
 <body>
 
-  <h1>Neon Gamer Calculator</h1>
+  <h1>Pastel Sparkle Calculator</h1>
+  <button class="toggle-btn" onclick="toggleMode()">Toggle Day/Night</button>
 
-  <!-- Calculator -->
   <div class="calculator">
+    <div class="history-bar" id="historyBar"></div>
     <div class="display" id="display">0</div>
     <div class="buttons">
+      <button class="clear" onclick="clearDisplay()">C</button>
+      <button class="ce" onclick="clearLast()">CE</button>
+      <button class="operator" onclick="appendOperator('%')">%</button>
+      <button class="operator" onclick="appendOperator('/')">÷</button>
+
       <button onclick="appendNumber('7')">7</button>
       <button onclick="appendNumber('8')">8</button>
       <button onclick="appendNumber('9')">9</button>
-      <button onclick="operate('/')">÷</button>
-      
+      <button class="operator" onclick="appendOperator('*')">×</button>
+
       <button onclick="appendNumber('4')">4</button>
       <button onclick="appendNumber('5')">5</button>
       <button onclick="appendNumber('6')">6</button>
-      <button onclick="operate('*')">×</button>
-      
+      <button class="operator" onclick="appendOperator('-')">−</button>
+
       <button onclick="appendNumber('1')">1</button>
       <button onclick="appendNumber('2')">2</button>
       <button onclick="appendNumber('3')">3</button>
-      <button onclick="operate('-')">-</button>
-      
+      <button class="operator" onclick="appendOperator('+')">+</button>
+
       <button onclick="appendNumber('0')">0</button>
       <button onclick="appendNumber('.')">.</button>
-      <button onclick="calculate()">=</button>
-      <button onclick="operate('+')">+</button>
-      
-      <button onclick="clearDisplay()" style="grid-column: span 4;">Clear</button>
+      <button class="equals" onclick="calculate()">=</button>
     </div>
-  </div>
-
-  <!-- History Section -->
-  <div class="history">
-    <h2>History</h2>
-    <ul id="historyList"></ul>
   </div>
 
   <script>
     let display = document.getElementById('display');
-    let historyList = document.getElementById('historyList');
-    let currentInput = '';
-    let operator = '';
-    let firstValue = '';
+    let historyBar = document.getElementById('historyBar');
+    let expression = '';
 
     function appendNumber(num) {
       if (display.textContent === '0') {
@@ -147,37 +165,49 @@
       } else {
         display.textContent += num;
       }
+      expression += num;
     }
 
-    function operate(op) {
-      firstValue = display.textContent;
-      operator = op;
-      display.textContent = '';
+    function appendOperator(op) {
+      if (expression && !/[+\-*/%]$/.test(expression)) {
+        display.textContent += op;
+        expression += op;
+      }
     }
 
     function calculate() {
-      if (firstValue && operator && display.textContent) {
-        let result = eval(firstValue + operator + display.textContent);
-        let calculation = `${firstValue} ${operator} ${display.textContent} = ${result}`;
+      try {
+        let result = eval(expression);
+        historyBar.textContent = `${expression} =`;
         display.textContent = result;
-        addToHistory(calculation);
-        firstValue = '';
-        operator = '';
+        expression = result.toString();
+      } catch {
+        display.textContent = 'Error';
+        expression = '';
       }
     }
 
     function clearDisplay() {
       display.textContent = '0';
-      firstValue = '';
-      operator = '';
+      historyBar.textContent = '';
+      expression = '';
     }
 
-    function addToHistory(calculation) {
-      const li = document.createElement('li');
-      li.textContent = calculation;
-      historyList.prepend(li);
+    function clearLast() {
+      if (display.textContent.length === 1) {
+        display.textContent = '0';
+      } else {
+        display.textContent = display.textContent.slice(0, -1);
+      }
+      expression = expression.slice(0, -1);
+    }
+
+    function toggleMode() {
+      document.body.classList.toggle('night');
     }
   </script>
 
 </body>
 </html>
+
+
